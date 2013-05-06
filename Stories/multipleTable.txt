@@ -1,0 +1,28 @@
+﻿As Olivia/Henrik/Mary I frequently want to switch back and forth between tables quickly and easily in the display area of the ACL UI in order to compare their contents.
+
+*AC*:
+Opening, closing, deleting and pinning tables:
+- The last table opened or whose table tab was last selected should be treated as the primary table
+- The primary table name should be indicated with bolding in both the display area and in the project navigator
+- When a table is opened through the UI or command line it should appear as an unpinned table tab. If there is an unpinned table tab in the display area it should be replaced with the newly open table tab
+- The user should be able to pin an unpinned table tab in the display area
+- The user should be able to unpin a pinned table tab in the display area
+- There can be multiple pinned tables in the display area
+- The underlying table of any pinned table tabs that are removed from the display area should remain open until the table is closed or deleted
+- If a table gets deleted or closed any corresponding table tab in the display area should also be closed 
+- Pinned tables should have the green open table indicator icon displayed on the table's icon in the project navigator
+- If a table tab is closed the underlying table should remain open and the green open table indicator icon should be displayed on the table's icon in the project navigator
+- When switching between table tabs the active filters, views, filter history and indexes should be retained for each table
+- The information displayed in the status bar should always reflect the primary table
+- Prompt(s) to save changes in a view or views should only occur when closing a table or project
+- Closing the primary table should not close the secondary table
+- Selecting a table as primary that has already been opened as secondary should not change it to the primary open table. It's secondary table status should be removed  through the navigator or command line before it can be   selected as primary
+- When a primary and secondary table are open and a new table is opened (as primary) and then closed the original primary table that is still opened should revert back to primary table status.
+- Selecting a hyperlink in a results tab that points to a filtered area of an open table that is not primary should set the table as primary, put the table tab in focus and then apply the hyperlink filter
+- Relinking a table in the project navigator or in the command line should refresh the table in focus or if the table is not in focus if it does acquire focus it should display the new data
+
+*UI & Strings*:
+- N/A
+
+*Technical notes*:
+N/A
